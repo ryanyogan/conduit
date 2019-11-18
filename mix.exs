@@ -34,10 +34,16 @@ defmodule Conduit.MixProject do
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
+      {:uuid, "~> 1.1"},
 
       # Event Sourcing
       {:commanded, "~> 0.19.1"},
-      {:commanded_eventstore_adapter, "~> 0.6.0"}
+      {:commanded_eventstore_adapter, "~> 0.6.0"},
+      {:exconstructor, "~> 1.1.0"},
+      {:commanded_ecto_projections, "~> 0.8.0"},
+
+      # Testing
+      {:ex_machina, "~> 2.3.0", only: [:test]}
     ]
   end
 
