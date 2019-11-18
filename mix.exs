@@ -42,6 +42,9 @@ defmodule Conduit.MixProject do
       {:exconstructor, "~> 1.1.0"},
       {:commanded_ecto_projections, "~> 0.8.0"},
 
+      # Tools / Utilities
+      {:vex, "~> 0.8.0"},
+
       # Testing
       {:ex_machina, "~> 2.3.0", only: [:test]}
     ]
