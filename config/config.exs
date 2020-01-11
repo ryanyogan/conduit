@@ -21,4 +21,10 @@ config :commanded,
 config :commanded_ecto_projections,
   repo: Conduit.Repo
 
+config :vex,
+  sources: [
+    Conduit.Support.Validators,
+    Vex.Validators
+  ]
+
 import_config "#{Mix.env()}.exs"
