@@ -38,6 +38,7 @@ defmodule Conduit.MixProject do
       # Commanded / Event Store
       {:commanded, "~> 0.15"},
       {:commanded_eventstore_adapter, "~> 0.3"},
+      {:commanded_ecto_projections, "~> 0.6"},
 
       # Testing / Utilities
       {:ex_machina, "~> 2.0", only: :test},
@@ -50,7 +51,8 @@ defmodule Conduit.MixProject do
     [
       "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
       "ecto.reset": ["ecto.drop", "ecto.setup"],
-      test: ["ecto.create --quiet", "ecto.migrate", "test"]
+      test: ["ecto.create --quiet", "ecto.migrate", "test"],
+      fix: ["deps.compile", "compile"]
     ]
   end
 end

@@ -4,8 +4,7 @@ config :conduit, Conduit.Repo,
   username: "postgres",
   password: "postgres",
   database: "conduit_readstore_test",
-  hostname: "localhost",
-  pool: Ecto.Adapters.SQL.Sandbox
+  hostname: "localhost"
 
 config :eventstore, EventStore.Storage,
   serializer: Commanded.Serialization.JsonSerializer,
