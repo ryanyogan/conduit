@@ -41,7 +41,8 @@ defmodule Conduit.MixProject do
 
       # Testing / Utilities
       {:ex_machina, "~> 2.0", only: :test},
-      {:exconstructor, "~> 1.1"}
+      {:exconstructor, "~> 1.1"},
+      {:mix_test_watch, "~> 0.5", only: :dev, runtime: false}
     ]
   end
 
